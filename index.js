@@ -8,5 +8,5 @@ app.use(express.static(path.join(__dirname, "public")));
 app.get("/", (req, res) => {
     res.render("pages/index");
 });
-const port = process.env.port || 3000;
+const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`Server is running on ${port} http://localhost:${port}`));
