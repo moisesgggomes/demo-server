@@ -6,6 +6,7 @@ app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
 
 app.get("/", (req, res) => {
-    res.send("pages/index");
+    res.render("pages/index");
 });
-app.listen(0);
+const port = process.env.port || 3000;
+app.listen(port, () => console.log(`Server is running on ${port} http://localhost:${port}`));
